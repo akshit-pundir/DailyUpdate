@@ -1,0 +1,17 @@
+{
+  "name": "p-projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": " npx postcss styles.css -o public/stylesheet/styles.css"
+  },
+  "author": "akshit",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.19.2"
+  }
+}

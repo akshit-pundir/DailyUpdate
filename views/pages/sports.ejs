@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+    <title>Sports</title>
+            <h1 class=" text-center m-3 display-1 fw-bolder">Top 10 Sports News</h1>
+
+        <% for(data of response){ %>
+                
+            <div class=" container mt-5">
+                  <h1 class=""> <%= data.title %></h1>  
+     
+                  <h5 class=" ms-2 mt-3">By:- <%=data.source.name  %> </h5>  
+              
+                   <p class=" ms-2 mt-2">PublishedAt:-<%= data.publishedAt %></p> 
+
+                    <div  class=" d-flex align-items-center justify-content-center" >
+                           <img src="<%=data.image  %>" alt="" style="width: 900px; height: 500px;" class=" img-fluid m-4"> 
+
+                    </div>
+                    
+                    <div class=" d-flex  flex-column" style="width: 68.75rem;">
+                    <p class=" m-2  fs-5"> <%= data.description %> </p>
+                    <p class=" m-2 fs-5"> <%= data.content %> </p>
+                    <a  href="<%= data.url %>" class="  ms-2 link-primary text-decoration-none"> More...</a>
+                </div>   
+            
+                </div>
+
+
+
+            <% } %>
